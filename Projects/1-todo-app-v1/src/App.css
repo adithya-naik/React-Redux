@@ -1,0 +1,30 @@
+h1{
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.my-row{
+  display: flex;
+  align-items: center;
+  /* border: 2px solid rgba(0, 213, 255, 0.088);   */
+  border-radius: 20px;
+  margin: 10px 5px;
+  padding:4px  12px;
+}
+.input-row{
+  margin-top: 3%;
+  text-align: left;
+}
+.items-row{
+  margin-top: 5%;
+  text-align: left;
+}
+.my-btn{
+  min-width: 80px;
+  position: relative;
+  left: 120px;
+}
+input{
+  width: 100%;
+}
