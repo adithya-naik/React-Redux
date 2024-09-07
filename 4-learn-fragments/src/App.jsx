@@ -3,6 +3,8 @@
 
 import ItemsList from './components/ItemsList';
 import Errormsg from './components/ErrorMsg';
+import Container from './components/Container';
+import Input from './components/Input';
 import './App.css'
 
 function App() {
@@ -31,10 +33,18 @@ function App() {
 let items = ["Baadham","Karjura","Kismis","Jeedi Pappu","Kaaju","Walnut","Pista","Sunflower seeds "]
 
   return <>
-    <h1 class="heading">Dry Fruits List</h1>
-    <Errormsg list = {items}></Errormsg>
-    <ItemsList list = {items}></ItemsList>
+  {/* what evr it may be the chilfdren passed in the container,it can be img,video,post,story or any,that will be rendered irrespective of the type which is to be used  */}
+      <Container>
+        <h1 class="heading">Dry Fruits List</h1>
+        <Errormsg list = {items}></Errormsg>
+        <Input></Input>
+        <ItemsList list = {items}></ItemsList>
+      </Container>
+
+      <Container>
+        <p>Above are the list of Dry Fruits that are good for your health and well being</p>
+      </Container>
+  
   </>
 }
-
-export default App
+export default App;

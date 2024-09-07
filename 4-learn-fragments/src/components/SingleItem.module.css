@@ -1,7 +1,15 @@
 .my-item{
-  font-size: medium;
+  font-size: 0.9rem;
+  color: rgb(80, 80, 80);
 }
 .my-row{
   background-color: rgba(0, 217, 233, 0.459);
-  margin: 2px;
+  /* margin: 2px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-btn{
+  float: right;
 }
