@@ -1,9 +1,22 @@
-h1{
+.heading{
   font-weight: 700;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
+.input-row{
+  margin-top: 3%;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+/* these are used in 2 different components so,we will left them in this file instead separate css modules */
 .my-row{
   display: flex;
   align-items: center;
@@ -12,18 +25,6 @@ h1{
   margin: 10px 5px;
   padding:4px  12px;
 }
-.input-row{
-  margin-top: 3%;
-  text-align: left;
-}
-.items-row{
-  margin-top: 5%;
-  text-align: left;
-}
 .my-btn{
   min-width: 80px;
-}
-input{
-  width: 100%;
-  text-overflow: ellipsis;
 }
