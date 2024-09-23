@@ -18,3 +18,4 @@ let onClickBuyButton = (s)=>{
 }
 
 export default ItemsList;
+
