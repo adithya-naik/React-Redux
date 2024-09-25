@@ -17,9 +17,9 @@ function App() {
       curVal = Math.abs(curVal);
       setCurVal(curVal);
     }
-    else if(b==="≈"){
-      curVal = Math.round(curVal);
-      setCurVal(curVal);
+    else if(b==="DEL"){
+      curVal = curVal.substring(0,curVal.length-1);
+      setCurVal((curVal));
     }
     else{
       setCurVal(curVal+b);
