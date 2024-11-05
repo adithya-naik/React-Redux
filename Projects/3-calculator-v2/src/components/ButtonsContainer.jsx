@@ -8,6 +8,7 @@ function ButtonsContainer({ func }) {
     "|x|",
     "/",
     
+    
     "7",
     "8",
     "9",
