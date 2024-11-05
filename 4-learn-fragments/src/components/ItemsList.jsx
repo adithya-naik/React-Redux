@@ -5,9 +5,9 @@ import styles from "./ItemsList.module.css"
 function ItemsList(props){
 let recieved_list = props.list;
 
-let onClickBuyButton = (s)=>{
-  console.log(`${s} is bought`);
-}
+// let onClickBuyButton = (s)=>{
+//   console.log(`${s} is bought`);
+// }
   return <>
   <ul class={`${styles["my-container"]} list-group`}>
       {recieved_list.map(item =>(

@@ -9,6 +9,9 @@
   align-items: center;
   justify-content: center;
 }
+.my-row:hover{
+  background-color: rgba(167, 173, 175, 0.236);
+}
 
 .my-btn{
   float: right;
