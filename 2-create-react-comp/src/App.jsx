@@ -4,6 +4,9 @@ import MyButton  from "./components/MyButton"
 import DynamicComponents from "./components/DynamicComponents"
 // default export
 import Reusable from "./components/Reusable"
+
+
+
 // named export
 import { MyBut } from "./components/MyBut"
 // named export
@@ -12,7 +15,7 @@ import { Header } from "./components/MyBut"
 
 function App() {
   return <div>
-    <button>Click</button>
+    <button>Click 1st</button>
     <MyButton></MyButton>
     <MyBut></MyBut>
     <Header></Header>
