@@ -1,7 +1,9 @@
-import Post from "./post";
+import Post from "./Post";
 
 const PostList = ()=>{
   return <>
+  <Post></Post>
+  <Post></Post>
   <Post></Post>
   <Post></Post>
   
