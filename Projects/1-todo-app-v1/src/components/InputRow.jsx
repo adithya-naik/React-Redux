@@ -19,3 +19,19 @@ function InputRow() {
 }
 
 export default InputRow;
+
+
+// import React from 'react'
+
+// const InputRow = () => {
+//   return (
+//     <div>
+//       <h1 className='text-center text-danger bg-warning'>Input row</h1>
+//     </div>
+//   )
+// }
+
+// export default InputRow
+
+
+
