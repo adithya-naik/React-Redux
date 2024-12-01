@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import CreatePost from "./components/CreatePost";
-import PostList from "./components/postList";
+import PostList from "./components/PostList";
 
 import PostListProvider from "./store/post-list-store";
 

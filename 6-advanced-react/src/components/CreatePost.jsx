@@ -7,7 +7,9 @@ const CreatePost = () => {
   const userIdElement = useRef();
   const postTitleElement = useRef();
   const postBodyElement = useRef();
-  const reactionsElement = useRef();
+  const viewsElement = useRef();
+  const  likesElement = useRef();
+  const  dislikesElement = useRef();
   const tagsElement = useRef();
 
   const handleSubmit = (event) => {
@@ -16,20 +18,31 @@ const CreatePost = () => {
     const userId = userIdElement.current.value;
     const postTitle = postTitleElement.current.value;
     const postBody = postBodyElement.current.value;
-    const reactions = reactionsElement.current.value;
+    const likes = likesElement.current.value;
+    const dislikes =  dislikesElement.current.value;
     const tags = tagsElement.current.value.split(" ");
+    const views = viewsElement.current.value;
 
     userIdElement.current.value = "";
     postTitleElement.current.value = "";
     postBodyElement.current.value = "";
-    reactionsElement.current.value = "";
+    likesElement.current.value = "";
     tagsElement.current.value = "";
+    viewsElement.current.value = "",
 
-    addPost(userId, postTitle, postBody, reactions, tags);
+    addPost(userId, postTitle, postBody,  tags,views,likes,dislikes);
   };
+
+
+
+
+
+
 
   return (
     <form className="create-post" onSubmit={handleSubmit}>
+
+
       <div className="mb-3">
         <label htmlFor="userId" className="form-label">
           Enter your User Id here
@@ -42,6 +55,7 @@ const CreatePost = () => {
           placeholder="Your User Id"
         />
       </div>
+
 
       <div className="mb-3">
         <label htmlFor="title" className="form-label">
@@ -71,15 +85,44 @@ const CreatePost = () => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="reactions" className="form-label">
-          Number of reactions
+        <label htmlFor="views" className="form-label">
+          Number of Views
         </label>
         <input
           type="text"
-          ref={reactionsElement}
+          ref={viewsElement}
           className="form-control"
-          id="reactions"
-          placeholder="How many people reacted to this post"
+          id="views"
+          placeholder="How many people viwed this post"
+        />
+      </div>
+
+
+    
+
+      <div className="mb-3">
+        <label htmlFor="likes" className="form-label">
+          Number of likes
+        </label>
+        <input
+          type="text"
+          ref={likesElement}
+          className="form-control"
+          id="likes"
+          placeholder="How many people liked this post"
+        />
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="dislikes" className="form-label">
+          Number of dislikes
+        </label>
+        <input
+          type="text"
+          ref={dislikesElement}
+          className="form-control"
+          id="dislikes"
+          placeholder="How many people disliked this post"
         />
       </div>
 

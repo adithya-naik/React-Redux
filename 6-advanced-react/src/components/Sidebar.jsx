@@ -15,24 +15,18 @@ const Sidebar = ({selectedTab,setSelectedTab}) => {
         <svg className="bi me-2" width="40" height="32">
           <use xlinkHref="#bootstrap"></use>
         </svg>
-        <span className="fs-4">Sidebar</span>
+        <span className="fs-4">iAPP</span>
       </a>
       <hr />
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item" onClick={()=>{handleClick("Home")}}>
           <a href="#" className={`nav-link text-white ${selectedTab==="Home" && "active"}`} aria-current="page">
-            <svg className="bi me-2" width="16" height="16">
-              <use xlinkHref="#home"></use>
-            </svg>
             Home
           </a>
         </li>
 
         <li onClick={()=>{handleClick("Create Post")}}>
           <a href="#" className={`nav-link text-white ${selectedTab==="Create Post" && "active"}`}>
-            <svg className="bi me-2" width="16" height="16">
-              <use xlinkHref="#speedometer2"></use>
-            </svg>
             Create Post
           </a>
         </li>
