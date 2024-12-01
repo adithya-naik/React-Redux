@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useCallback, useReducer } from "react";
 
 export const PostList = createContext({
   postList : [],
@@ -54,14 +54,16 @@ const addPost = (userId, postTitle, postBody, tags,views,likes,dislikes)=>{
   })
 }
 
-const delPost = (id)=>{
+// as deletePost method changes on evry render,as creates a new object of that function so to avoid that we do this
+
+const delPost = useCallback((id)=>{
   dispatch({
     type : "DEL_POST",
     payload : {
       PostId : id,
     },
-  })
-}
+  });
+},[dispatch]);
 
   return <PostList.Provider value={{
     postList,
