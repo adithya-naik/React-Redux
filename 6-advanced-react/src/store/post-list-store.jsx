@@ -25,7 +25,7 @@ const reducerFunction = (currentPostList,action)=>{
 
 const PostListProvider = ({ children }) => {
 
-const [postList,dispatch] = useReducer(reducerFunction,DEFAULT_POST_LIST)
+const [postList,dispatch] = useReducer(reducerFunction,[])
 
 const addInitialPosts = (posts)=>{
   dispatch({
@@ -55,7 +55,6 @@ const addPost = (userId, postTitle, postBody, tags,views,likes,dislikes)=>{
 }
 
 const delPost = (id)=>{
-  console.log(id);
   dispatch({
     type : "DEL_POST",
     payload : {
@@ -76,29 +75,16 @@ export default PostListProvider;
 
 
 
-const DEFAULT_POST_LIST = [
-  {
-    id: "1",
-    title: "Going to Mumbai",
-    body: "Hi Friends, I am going to Mumbai for my vacations. Hope to enjoy a lot. Peace out.",
-    reactions: {
-      likes :156,
-      dislikes :33,
-    },
-    userId: "user-9",
-    tags: ["vacation", "Mumbai", "Enjoying"],
-    views :34,
-  },
-  {
-    id: "2",
-    title: "Paas ho bhai",
-    body: "4 saal ki masti k baad bhi ho gaye hain paas. Hard to believe.",
-    reactions: {
-      likes :1,
-      dislikes :3,
-    },
-    userId: "user-12",
-    tags: ["Graduating", "Unbelievable"],
-    views :34,
-  },
-];
+
+// {
+//   id: "2",
+//   title: "Paas ho bhai",
+//   body: "4 saal ki masti k baad bhi ho gaye hain paas. Hard to believe.",
+//   reactions: {
+//     likes :1,
+//     dislikes :3,
+//   },
+//   userId: "user-12",
+//   tags: ["Graduating", "Unbelievable"],
+//   views :34,
+// },
